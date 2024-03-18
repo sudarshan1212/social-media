@@ -1,0 +1,22 @@
+extends layout/form-layout.pug
+block content
+body(class="bg-gray-200")
+    div(class="form-container flex justify-center items-center h-screen")
+      div(class=" bg-white p-10 rounded-lg shadow-lg w-96")
+        h1(class="mb-3 text-center text-3xl font-bold text-black  uppercase") create account
+        form#frm(method="POST")
+          div(class="flex justify-center")
+          p.errorMessage #{errorMessage}
+          
+          input#name(type="text", name="name", placeholder="Name",value=name, required class="w-full border border-gray-300 rounded px-3 py-2 mb-3")
+          input#email(type="text", name="email",value=email, placeholder="Email", required class=" w-full border border-gray-300 rounded px-3 py-2 mb-3 ")
+          input#username(type="text", name="username",value=username, placeholder="Username", required class="w-full border border-gray-300 rounded px-3 py-2 mb-3")
+          input#password(type="password", name="password", placeholder="Password", required class="w-full border border-gray-300 rounded px-3 py-2 mb-3")
+          input#conifrm(type="password", name="confirm", placeholder="Confirm Password", required class="w-full border border-gray-300 rounded px-3 py-2 mb-3")
+          button(type="submit", class="w-full bg-purple-500  text-white  font-semibold   px-4 py-2 rounded  transition  duration-300 transform   hover:scale-105  hover:bg-purple-700  ") Register
+       
+        .flex.justify-center.items-center
+         p.mr-1.mt-2 Already hava an account yet?
+         a.text-purple-400.font-bold.underline.transition.duration-200.transform.mt-2(href='/login ', class='hover:scale-105 hover:text-purple-700') Sign Up
+    //- script(src="/js/register.js", defer="")  
+         

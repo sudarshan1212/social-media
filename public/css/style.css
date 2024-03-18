@@ -1,0 +1,31 @@
+.form-container {
+  opacity: 0;
+  animation: fadeIn ease-in 0.5s;
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.error {
+  border: 2px solid red;
+}
+.errorMessage {
+  color: red !important;
+  text-align: center;
+  margin-bottom: 4px;
+}

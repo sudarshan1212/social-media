@@ -1,0 +1,20 @@
+extends layout/form-layout.pug
+block content
+  body(class="bg-gray-200")
+    div(class="form-container flex justify-center items-center h-screen")
+      div(class="bg-white p-10 rounded-lg shadow-lg w-96 mt-2")
+        h1(class="mb-3 text-center text-3xl font-bold text-black  uppercase") Welcome Back!
+        div(class="flex justify-center")
+        p.errorMessage #{errorMessage}
+         form#frm(method="POST") 
+          input(type="text", name="username", placeholder="Username", required class="w-full border border-gray-300 rounded px-3 py-2 mb-3")
+          input(type="password", name="password", placeholder="Password", required class="w-full border border-gray-300 rounded px-3 py-2 mb-3")
+          button(type="submit", class="w-full bg-purple-500  text-white  font-semibold   px-4 py-2 rounded  transition  duration-300 transform   hover:scale-105  hover:bg-purple-700  ") Login       
+        .flex.justify-center.items-center
+         p.mr-1.mt-2 Doesn't hava an account yet?
+         a.text-purple-400.font-bold.underline.transition.duration-200.transform.mt-2(href='/register', class='hover:scale-105 hover:text-purple-700') Sign Up
+        .flex.justify-center.items-center
+         a.text-purple-400.font-bold.underline.transition.duration-200.transform.mt-2(href='#', class='hover:scale-105 hover:text-purple-600') Forget Password?
+
+           
+        
