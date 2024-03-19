@@ -1,7 +1,7 @@
 const expressAsyncHandler = require("express-async-handler");
 const register = require("../model/registerModel");
 const bcrypt = require("bcrypt");
-
+// LOGIN USING GET METHOD
 const getLogin = (req, res) => {
   const pageData = { tittle: "user login" };
   res.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
